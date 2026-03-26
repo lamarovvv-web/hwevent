@@ -3,9 +3,9 @@ import asyncio
 from aiogram import Bot, Dispatcher, types
 
 # ТВОИ ДАННЫЕ
-DS_TOKEN = 'MTQ4NjczNTgxNTAzMDg3MDE4Nw.GiEvOB.2doZprTi6TDcd2qmF91gvU0KmpiVxa_dWKPnVg'
-DS_CHANNEL_ID = 1484544347172245635 
-TG_TOKEN = '8169376952:AAF4wO3HM3MyqEeog_5qVKVubpNChlMiy-I'
+DS_TOKEN = os.getenv('DISCORD_TOKEN')
+DS_CHANNEL_ID = int(os.getenv('DISCORD_CHANNEL_ID'))
+TG_TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 bot = Bot(token=TG_TOKEN)
 dp = Dispatcher()
